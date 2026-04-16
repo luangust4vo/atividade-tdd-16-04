@@ -18,4 +18,10 @@ describe("validation", () => {
     const isValid = validatePassword(password);
     expect(isValid).toBe(false);
   });
+
+  test("should reject password without at least 1 number", () => {
+    const password = "NoNumbers";
+    const isValid = validatePassword(password);
+    expect(isValid).toBe(false);
+  });
 });
