@@ -6,4 +6,10 @@ describe("validation", () => {
     const isValid = validatePassword(password);
     expect(isValid).toBe(false);
   });
+
+  test("should reject password without at least 1 upper letter", () => {
+    const password = "lowercase1";
+    const isValid = validatePassword(password);
+    expect(isValid).toBe(false);
+  });
 });
