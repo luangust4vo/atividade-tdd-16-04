@@ -1,5 +1,5 @@
 const validatePassword = (password) => {
-  const regex = /.{8,}/;
+  const regex = /^(?=.[A-Z]).{8,}/;
 
   return regex.test(password);
 };
