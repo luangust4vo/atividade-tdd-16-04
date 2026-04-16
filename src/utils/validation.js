@@ -1,9 +1,7 @@
 const validatePassword = (password) => {
-  if (password.length < 8) {
-    return false;
-  }
+  const regex = /.{8,}/;
 
-  return true;
+  return regex.test(password);
 };
 
 export { validatePassword };
