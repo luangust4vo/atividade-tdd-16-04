@@ -1,3 +1,5 @@
+import { validatePassword } from "../../src/utils/validation";
+
 describe("validation", () => {
   test("should reject password with less than 8 characters", () => {
     const password = "short";
