@@ -17,3 +17,12 @@ Seguindo o que foi mostrado nas aulas, decidi, já que tinha tempo, em criar um
 json com os casos de teste e depois usar ele criar os testes, percorrendo e
 usando as propriedades para construir os testes, como 'description', 'expected'
 e o valor a ser testado que fica dentro do 'input'.
+
+
+### Sobre o regex
+A notação '(?=.*[A-Z])', por exemplo, faz uma verificação seguindo o seguinte:
+* (...) -> define o agrupamento
+* '?=' -> diz que só precisa checar se aquela condição é verdadeira
+* '.' -> significa tipo 'qualquer caractere'
+* '*' -> significa tipo 'zero ou mais'
+* [...] -> aqui fica a regra, 'A-Z' são todas as maiúsculas, 'a-z' as minúsculas, etc
