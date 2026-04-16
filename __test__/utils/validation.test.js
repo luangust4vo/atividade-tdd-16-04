@@ -1,39 +1,11 @@
 import { validatePassword } from "../../src/utils/validation";
+import testCases from "../data/validation.json";
 
 describe("validation", () => {
-  test("should reject password with less than 8 characters", () => {
-    const password = "short";
-    const isValid = validatePassword(password);
-    expect(isValid).toBe(false);
-  });
-
-  test("should reject password without at least 1 upper letter", () => {
-    const password = "lowercase1";
-    const isValid = validatePassword(password);
-    expect(isValid).toBe(false);
-  });
-
-  test("should reject password without at least 1 lower letter", () => {
-    const password = "UPPERCASE1";
-    const isValid = validatePassword(password);
-    expect(isValid).toBe(false);
-  });
-
-  test("should reject password without at least 1 number", () => {
-    const password = "NoNumbers";
-    const isValid = validatePassword(password);
-    expect(isValid).toBe(false);
-  });
-
-  test("should reject password without at least 1 special character", () => {
-    const password = "NoSpecial1";
-    const isValid = validatePassword(password);
-    expect(isValid).toBe(false);
-  });
-
-  test("should reject password that have white spaces", () => {
-    const password = "  White    Space1!  ";
-    const isValid = validatePassword(password);
-    expect(isValid).toBe(false);
+  testCases.forEach(({ description, input, expected }) => {
+    test(description, () => {
+      const isValid = validatePassword(input.password);
+      expect(isValid).toBe(expected.valid);
+    });
   });
 });

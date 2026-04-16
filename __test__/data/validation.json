@@ -1,0 +1,56 @@
+[
+    {
+        "description": "should reject password with less than 8 characters",
+        "input": {
+            "password": "short"
+        },
+        "expected": {
+            "valid": false
+        }
+    },
+    {
+        "description": "should reject password without at least 1 upper letter",
+        "input": {
+            "password": "lowercase1"
+        },
+        "expected": {
+            "valid": false
+        }
+    },
+    {
+        "description": "should reject password without at least 1 lower letter",
+        "input": {
+            "password": "UPPERCASE1"
+        },
+        "expected": {
+            "valid": false
+        }
+    },
+    {
+        "description": "should reject password without at least 1 number",
+        "input": {
+            "password": "NoNumbers"
+        },
+        "expected": {
+            "valid": false
+        }
+    },
+    {
+        "description": "should reject password without at least 1 special character",
+        "input": {
+            "password": "NoSpecial1"
+        },
+        "expected": {
+            "valid": false
+        }
+    },
+    {
+        "description": "should reject password that have white spaces",
+        "input": {
+            "password": "  White    Space1!  "
+        },
+        "expected": {
+            "valid": false
+        }
+    }
+]
