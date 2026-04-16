@@ -32,7 +32,7 @@ describe("validation", () => {
   });
 
   test("should reject password that have white spaces", () => {
-    const password = "White Space1!";
+    const password = "  White    Space1!  ";
     const isValid = validatePassword(password);
     expect(isValid).toBe(false);
   });
