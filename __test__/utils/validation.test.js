@@ -24,4 +24,10 @@ describe("validation", () => {
     const isValid = validatePassword(password);
     expect(isValid).toBe(false);
   });
+
+  test("should reject password without at least 1 special character", () => {
+    const password = "NoSpecial1";
+    const isValid = validatePassword(password);
+    expect(isValid).toBe(false);
+  });
 });
